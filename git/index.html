@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Git - crash course</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Git crash course" />
+        <meta name="keywords" content="open-source, git" />
+        <meta name="author" content="Handrus" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/style_common.css" />
+		<link rel="stylesheet" type="text/css" href="css/style3.css" />
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="css/style_ie.css" />
+		<![endif]-->
+		<!-- jQuery -->
+		<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+		<!-- jmpress plugin -->
+		<script type="text/javascript" src="js/jmpress.min.js"></script>
+		<!-- jmslideshow plugin : extends the jmpress plugin -->
+		<script type="text/javascript" src="js/jquery.jmslideshow.js"></script>
+		<script type="text/javascript" src="js/modernizr.custom.48780.js"></script>
+		<noscript>
+			<style>
+			.step {
+				width: 100%;
+				position: relative;
+			}
+			.step:not(.active) {
+				opacity: 1;
+				filter: alpha(opacity=99);
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+			}
+			.step:not(.active) a.jms-link{
+				opacity: 1;
+				margin-top: 40px;
+			}
+			</style>
+		</noscript>
+    </head>
+    <body>
+        <div class="container">
+			<header>
+				<h1>Git - crash course</h1>
+				<h2>Básico -> Intermediário</h2>
+			</header>
+			<section id="jms-slideshow" class="jms-slideshow">
+				<div class="step" data-color="color-1">
+					<div class="jms-content">
+						<h3><img src="images/logo-CI&T-RGB.png" alt="" class="small_logo"><span>bussines agility</span></h3>
+						<div class="mb-wrap mb-style-3">
+							<blockquote cite="http://www.ciandt.com/br-pt/carreira">
+								<p>Nós desenvolvemos pessoas, antes de desenvolver software</p>
+							</blockquote>
+							<div class="mb-attribution">
+								<p class="mb-author2">Cesar Gon</p>
+								<cite><a href="http://www.ciandt.com/br-pt/carreira">Cesar Gon</a></cite>
+								<div class="mb-thumb2"></div>
+							</div>
+						</div>
+						<div id="media-links">
+						  <ul class="media-list">
+						          <li class="media-item" id="item-0">
+						        <div class="media-container">
+						          <div class="bg-media-adjust"></div>
+						          <div class="img-container" style="top: 8px; ">
+						            <img id="media-logo-item-0" class="media-logo" style="display:block;" src="images/img-gptw-brasil.png">
+						          </div>
+						        </div>
+						      </li>
+						          <li class="media-item" id="item-1">
+						        <div class="media-container">
+						          <div class="bg-media-adjust"></div>
+						          <div class="img-container" style="top: 8px; ">
+						            <img id="media-logo-item-1" class="media-logo" style="display:block;" src="images/img-100-mais-inovadoras-em-ti.png">
+						          </div>
+						        </div>
+						      </li>
+						          <li class="media-item" id="item-2">
+						        <div class="media-container">
+						          <div class="bg-media-adjust"></div>
+						          <div class="img-container" style="top: 8px; ">
+						            <img id="media-logo-item-2" class="media-logo" style="display:block;" src="images/guia-vocesa-exame.png">
+						          </div>
+						        </div>
+						      </li>
+						          <li class="media-item" id="item-3">
+						        <div class="media-container">
+						          <div class="bg-media-adjust"></div>
+						          <div class="img-container" style="top: 8px; ">
+						            <img id="media-logo-item-3" class="media-logo" style="display:block;" src="images/logo-gptw-2012 (1).png">
+						          </div>
+						        </div>
+						      </li>
+						          <li class="media-item" id="item-4">
+						        <div class="media-container">
+						          <div class="bg-media-adjust"></div>
+						          <div class="img-container" style="top: 8px; ">
+						            <img id="media-logo-item-4" class="media-logo" style="display:block;" src="images/img-iaop-2012_4.png">
+						          </div>
+						        </div>
+						      </li>
+						          <li class="media-item" id="item-5">
+						        <div class="media-container">
+						          <div class="bg-media-adjust"></div>
+						          <div class="img-container" style="top: 8px; ">
+						            <img id="media-logo-item-5" class="media-logo" style="display:block;" src="images/global-services-100-2012_6.png">
+						          </div>
+						        </div>
+						      </li>
+						      </ul>
+						</div>
+					</div>
+					<img class="logo_cit" src="images/logo-CI&T-RGB.png" />
+				</div>
+				<div class="step" data-color="color-2" data-y="500" data-scale="0.4" data-rotate-x="30">
+					<div class="jms-content">
+						<h3><span class='red'>Who</span> is talking??</h3>
+						<p>
+							Handrus
+							<ul>
+								<li>Arquiteto de Softwares @Ci&T</li>
+								<li>~9 anos de web e open-source</li>
+								<li>Rockeiro</li>
+								<li>Dev with passion!</li>
+								<li>handrus at gmail.com</li>
+								<li>about.me/handrus</li>
+							</ul>
+						</p>
+					</div>
+					<div class='me'>
+						<img src="images/handrus.jpg" />
+					</div>
+				</div>
+				<div class="step" data-color="color-1">
+					<div class="jms-content">
+						<h3><span class="red">WTH</span> is git?</h3>
+						<div class="mb-wrap mb-style-3">
+							<blockquote cite="http://www.kernel.org/pub/software/scm/git/docs/">
+								<p>Git is a stupid content tracker</p>
+							</blockquote>
+							<div class="mb-attribution">
+								<p class="mb-author">Linus Torvalds</p>
+								<cite><a href="http://www.kernel.org/pub/software/scm/git/docs/">Linux Kernel SCM</a></cite>
+								<div class="mb-thumb"></div>
+							</div>
+						</div>
+						<p>Don't believe it? Verify - <a href="https://speakerdeck.com/u/bkeepers/p/git-the-nosql-database">GIT as a noSQL Database!</a></p>
+					</div>
+					<img src="images/gitlogo.png" />
+				</div>
+				<div class="step" data-color="color-2" data-y="500" data-scale="0.4" data-rotate-x="30">
+					<div class="jms-content">
+						<h3>git is...</h3>
+						<p>
+							<ul>
+								<li>Written in lower case!!</li>
+								<li>Distributed</li>
+								<li>Based in the concept of pointers and Snapshots</li>
+								<li>A completely new way to use version control!</li>
+							</ul>
+						</p>
+					</div>
+					<img src="images/gitlogo.png" />
+				</div>
+				<div class="step" data-color="color-3" data-x="2000" data-z="3000" data-rotate="170">
+					<div class="jms-content">
+						<h3>No time to waste</h3>
+						<p>We will:</p>
+						<ol class='comands'>
+							<li>Create a repository
+								<span class='subitem'>
+									<br />
+									git init
+									<br />
+									git clone &lt;remote&gt; &lt;local path&gt;
+								</span>
+							</li>
+							<li>Add a remote repository
+								<span class='subitem'>
+									<br />
+									git remote add &lt;remote_name&gt; &lt;server&gt;
+								</span>
+							</li>
+							<li>Create a local branch
+								<span class='subitem'>
+									<br />
+									git branch &lt;branch_name&gt;
+								</span>
+							</li>
+							<li>Create a remote branch
+								<span class='subitem'>
+									<br />
+									git push &lt;remote_name&gt; &lt;branch_name&gt;
+								</span>
+							</li>
+							<li>Deleting branch
+								<span class='subitem'>
+									<br />
+									git push &lt;remote_name&gt; :&lt;branch_name&gt;
+									<br />
+									git branch -d &lt;branch_name&gt;
+								</span>
+							</li>
+							<li>learn how to avoid conflicts... and how to solve them!
+								<span class='subitem'>
+									<br />
+									git checkout &lt;branch_name&gt;
+									<br />
+									git branch &lt;merge_savepoint&gt;
+									<br />
+									git merge &lt;branch_name&gt;
+									<br />
+									Things go wrong?<br />
+									git reset --hard &lt;merge_savepoint&gt;
+									<br>
+									Things go well?<br />
+									git branch -d &lt;merge_savepoint&gt;
+								</span>
+							</li>
+						</ol>
+					</div>
+					<img src="images/3.png" />
+				</div>
+				<div class="step" data-color="color-4" data-x="3000">
+					<div class="jms-content">
+						<h3>Cool! We made it and have some more time...</h3>
+						<ol class='comands'>
+							<li>More conflict solving strategies
+								<span class='subitem'>
+									<br />
+									git checkout --theirs -- &lt;file&gt;
+									<br />
+									git checkout --ours -- &lt;file&gt;
+									<br />
+									https://github.com/git/git/blob/master/Documentation/merge-strategies.txtfile:///home/handrus/Documents/projects/personal/talks/git/git/index.html
+								</span>
+							</li>
+							<li>More ways to merge
+								<span class='subitem'>
+									<br />
+									git cherry-pick &lt;commit&gt;
+									<br />
+									git rebase &lt;branch_name&gt;
+									<br />
+									git reset --hard &lt;remote_name&gt;/&lt;branch_name&gt;
+									<br />
+								</span>
+							</li>
+							<li>Using stashes (git stash)
+								<span class='subitem'>
+									<br />
+									git stash save &lt;stash_description&gt;
+									<br />
+									git stash list
+									<br />
+									git stash apply &lt;stash_NUMBER&gt;
+									<br />
+									git stash pop
+									<br />
+									git stash drop &lt;stash_NUMBER&gt;
+									<br />
+									git stash clear
+								</span>
+							</li>
+							<li>Improving your command line
+								<span class='subitem'>
+									<br />
+									git config --global alias.&lt;alias_name&gt; "&lt;comand&gt;"
+									<br />
+									git config --global alias.st "status -s"
+									<br />
+									git config --global alias.undo "reset --hard HEAD"
+									<br />
+									git diff --word-diff
+									<br />
+									git checkout -t origin/feature
+									<br />
+									git show :/^Merge
+								</span>
+							</li>
+							<li>git tag
+								<span class='subitem'>
+									<br />
+									git tag -a v1.0.0 -m "Creating the first official version."
+									<br />
+									git describe --tags
+									<br />
+									touch test; git add test; git commit -am "Adding test files"
+									<br />
+									git describe --tags
+									<br />
+									git push --tags
+								</span>
+							</li>
+							<li>git clean
+								<span class='subitem'>
+									<br />
+									git clean -n -d -x &lt;folder&gt;
+									<br />
+									git clean -f -d -x &lt;folder&gt;
+								</span>
+							</li>
+						</ol>
+					</div>
+				</div>
+				<div class="step" data-color="color-5" data-x="4000" data-z="1000"  >
+					<div class="jms-content">
+						<h3>Time urges... and is time to go home!</h3>
+						<p>Thank you for your time! For your awesome presence and for you precious attention!</p>
+						<p>Remember... All the fucking time commit must you!</p>
+					</div>
+					<img src="images/master_yoda.png" />
+				</div>
+			</section>
+        </div>
+		<script type="text/javascript">
+			$(function() {
+			
+				$( '#jms-slideshow' ).jmslideshow();
+				
+			});
+			$('.comands li').click(function(){
+				$(this).children('.subitem').toggle();
+			})
+		</script>
+    </body>
+</html>
